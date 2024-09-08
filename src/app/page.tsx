@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Image from "next/image";
 import ProductCard from "./components/ProductCard";
+import ProductCardS from "./components/ProductCardS";
 
 const Home = () => {
   const [products, setProducts] = useState();
@@ -20,13 +21,29 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="flex w-[65%] m-auto bg-green-200">
-      {products?.map((product) => (
-        <ProductCard product={product} />
+    <div className="flex w-[55%] flex-row m-auto flex-wrap">
+      <div className="m-4">
+        <ProductCardS />
+      </div>
+      {/* {products?.map(
+        (product) =>
+          product.category_id == "K0_UHDQq4QOuCp0GVDbDr" && (
+            <ProductCard product={product} />
+          )
         // <div key={product.id}>
         //   <Image src={product.images[1]} width={200} height={200} alt="img" />
         // </div>
-      ))}
+      )}
+
+      {products?.map(
+        (product) =>
+          product.category_id == "15zyVLkUSCOjcfEJC4r-U" && (
+            <ProductCard product={product} />
+          )
+        // <div key={product.id}>
+        //   <Image src={product.images[1]} width={200} height={200} alt="img" />
+        // </div>
+      )} */}
     </div>
   );
 };

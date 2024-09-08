@@ -8,14 +8,20 @@ const ProductCard = ({ product }) => {
 
   return (
     <div className="flex flex-col w-60 items-center m-2 cursor-pointer hover:border-orange-500">
-      <div className="border flex flex-col text-center items-center w-60 m-2 mb-0 ">
+      <div className="border flex flex-col items-center">
+        <div className="bg-green-600">
+          <p className="text-xl font-semibold px-1  ">90%</p>
+          <p className="text-[9px] font-semibold px-1  ">SPEC</p>
+          <p className="text-[9px] font-semibold px-1  ">SCORE</p>
+        </div>
         <Image
           src={product.images[1]}
           width={130}
           height={120}
           alt="img"
-          className="mt-2"
+          className="mt-2 object-cover"
         />
+
         <h2 className="mt-2 font-semibold">{product.title.substring(0, 25)}</h2>
         <h2 className="font-bold text-orange-600">
           {convertToRupees(product.price)}
