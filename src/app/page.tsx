@@ -21,29 +21,22 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="flex w-[55%] flex-row m-auto flex-wrap">
-      <div className="m-4">
-        <ProductCardS />
-      </div>
-      {/* {products?.map(
+    <div className="flex w-[60%] flex-row m-auto justify-center flex-wrap my-2 shadow p-5">
+      {products?.map(
         (product) =>
           product.category_id == "K0_UHDQq4QOuCp0GVDbDr" && (
-            <ProductCard product={product} />
+            <div className="mx-1 my-1" key={product.id}>
+              <ProductCardS product={product} />
+            </div>
           )
-        // <div key={product.id}>
-        //   <Image src={product.images[1]} width={200} height={200} alt="img" />
-        // </div>
       )}
 
       {products?.map(
         (product) =>
           product.category_id == "15zyVLkUSCOjcfEJC4r-U" && (
-            <ProductCard product={product} />
+            <ProductCardS product={product} />
           )
-        // <div key={product.id}>
-        //   <Image src={product.images[1]} width={200} height={200} alt="img" />
-        // </div>
-      )} */}
+      )}
     </div>
   );
 };
