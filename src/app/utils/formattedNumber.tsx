@@ -12,8 +12,8 @@ function convertToRupees(amount: number): string {
 const price1 = 20000;
 const price2 = 20000.75;
 
-console.log(convertToRupees(price1)); // Outputs: ₹20,000
-console.log(convertToRupees(price2)); // Outputs: ₹20,000.75
+// console.log(convertToRupees(price1)); // Outputs: ₹20,000
+// console.log(convertToRupees(price2)); // Outputs: ₹20,000.75
 // Outputs: ₹20,000
 
 export { convertToRupees };
